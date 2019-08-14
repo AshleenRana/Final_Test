@@ -13,8 +13,11 @@ using System.Windows.Forms;
  * */
 namespace finalTestC.Views
 {
+
     public partial class CharacterGenerationForm : finalTestC.Views.MasterForm
     {
+        Random random = new Random();
+
         public CharacterGenerationForm()
         {
             InitializeComponent();
@@ -52,15 +55,15 @@ namespace finalTestC.Views
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
             //generating first name of character
-            Random random = new Random();
+            
             string[] FirstName = File.ReadAllLines("firstNames.txt");
             int FirstNameIndex = random.Next(FirstName.Length);
             FirstNameDataLabel.Text = FirstName[FirstNameIndex];
 
             //generating last name of character
-            Random rand = new Random();
+            
             string[] LastName = File.ReadAllLines("lastNames.txt");
-            int LastNameIndex = rand.Next(LastName.Length);
+            int LastNameIndex = random.Next(LastName.Length);
             LastNameDataLabel.Text = LastName[LastNameIndex];
         }
         /// <summary>
@@ -71,8 +74,7 @@ namespace finalTestC.Views
         private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
         {
             //generating random numbers for abilities
-            Random random = new Random();
-
+            
             int Strengthnumber = random.Next(15);
             StrengthDataLabel.Text = Strengthnumber.ToString();
 
@@ -95,6 +97,42 @@ namespace finalTestC.Views
             
             int Socialnumber = random.Next(15);
             SocialDataLabel.Text = Socialnumber.ToString();
+        }
+
+        public static List<string> SkillsList = new List<string>();
+
+        public static void LoadSkills()
+        {
+           
+            using(StreamReader reader= new StreamReader("Skills.txt"))
+            {
+                string skill = reader.ReadLine();
+                while (skill!=null)
+                {
+                    Console.WriteLine(skill);
+                }
+            }
+        }
+
+
+        private void GenerateSkillsButton_Click(object sender, EventArgs e)
+        {
+            int skill1Index = random.Next(SkillsList.Count);
+            FirstSkillDataLabel.Text = SkillsList[skill1Index];
+
+            int skill2Index = random.Next(SkillsList.Count);
+            SecondSkillDataLabel.Text = SkillsList[skill2Index];
+
+            int skill3Index = random.Next(SkillsList.Count);
+            ThirdSkillDataLabel.Text = SkillsList[skill3Index];
+
+            int skill4Index = random.Next(SkillsList.Count);
+            FourthSkillDataLabel.Text = SkillsList[skill4Index];
+        }
+
+        private void CharacterGenerationForm_Load(object sender, EventArgs e)
+        {
+            LoadSkills();
         }
     }
 }
