@@ -63,5 +63,38 @@ namespace finalTestC.Views
             int LastNameIndex = rand.Next(LastName.Length);
             LastNameDataLabel.Text = LastName[LastNameIndex];
         }
+        /// <summary>
+        /// This is event handler for ability generation event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
+        {
+            //generating random numbers for abilities
+            Random random = new Random();
+
+            int Strengthnumber = random.Next(15);
+            StrengthDataLabel.Text = Strengthnumber.ToString();
+
+            
+            int Dexteritynumber = random.Next(15);
+            DexterityDataLabel.Text = Dexteritynumber.ToString();
+
+            
+            int Endurancenumber = random.Next(15);
+            EnduranceDataLabel.Text = Endurancenumber.ToString();
+
+            
+            int Intellectnumber = random.Next(15);
+            IntellectDataLabel.Text = Intellectnumber.ToString();
+
+            
+            int Edunumber = random.Next(15);
+            EducationDataLabel.Text = Edunumber.ToString();
+
+            
+            int Socialnumber = random.Next(15);
+            SocialDataLabel.Text = Socialnumber.ToString();
+        }
     }
 }

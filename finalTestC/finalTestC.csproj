@@ -93,7 +93,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Data\firstNames.txt" />
+    <Content Include="Data\firstNames.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\lastNames.txt" />
     <Content Include="Data\skills.txt" />
   </ItemGroup>
