@@ -32,6 +32,8 @@ namespace finalTestC.Objects
         {
             this.Skills = new List<Skill>();
             this.Identity = new Identity();
+            
+            
         }
     }
 }

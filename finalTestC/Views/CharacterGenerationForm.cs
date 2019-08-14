@@ -45,8 +45,20 @@ namespace finalTestC.Views
             {
                 MainTabControl.SelectedIndex++;
             }
+            if(MainTabControl.SelectedIndex==3)
+            {
+                using (StreamWriter writer = new StreamWriter("FinalData.txt"))
+                {
+                    FirstNameFinalLabel.Text = Program.characterForm.FirstNameDataLabel;
+                    LastNameFinalLabel.Text = Program.characterForm.LastNameDataLabel;
+                }
+            }
         }
 
+        public static void generateCharacterSheet(object sender,EventArgs e)
+        {
+            
+        }
         private void Label3_Click(object sender, EventArgs e)
         {
 
@@ -143,6 +155,16 @@ namespace finalTestC.Views
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFileDialog();
+        }
+
+        private void saveFileDialog()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
