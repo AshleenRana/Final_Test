@@ -84,19 +84,34 @@
             this.LastNameDataLabel = new System.Windows.Forms.Label();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.FirstNameSaveLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.StrengthDataSaveLabel = new System.Windows.Forms.Label();
+            this.IntellectDataSaveLabel = new System.Windows.Forms.Label();
+            this.SocialDataSaveLabel = new System.Windows.Forms.Label();
+            this.DexterityDataSaveLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.FirstSkillSaveLabel = new System.Windows.Forms.Label();
+            this.LastNameSaveLabel = new System.Windows.Forms.Label();
+            this.educationDataSaveLabel = new System.Windows.Forms.Label();
+            this.SecondSkillSaveLabel = new System.Windows.Forms.Label();
+            this.FourthSkillDataSaveLabel = new System.Windows.Forms.Label();
+            this.ThirdSkillDataSaveLabel = new System.Windows.Forms.Label();
+            this.EnduranceDataSaveLabel = new System.Windows.Forms.Label();
             this.NameSaveLabel = new System.Windows.Forms.Label();
+            this.SkillLabel = new System.Windows.Forms.Label();
+            this.AbilityLabel = new System.Windows.Forms.Label();
+            this.FirstNameFinalLabel = new System.Windows.Forms.Label();
+            this.LastNameFinalLabel = new System.Windows.Forms.Label();
+            this.FirstSkillFinalLabel = new System.Windows.Forms.Label();
+            this.SecondSkillFinalLabel = new System.Windows.Forms.Label();
+            this.ThirsSkillFinalLabel = new System.Windows.Forms.Label();
+            this.FourthSkillFinalLabel = new System.Windows.Forms.Label();
+            this.StrengthFinalLabel = new System.Windows.Forms.Label();
+            this.DextrityFinalLabel = new System.Windows.Forms.Label();
+            this.IntellectFinalLabel = new System.Windows.Forms.Label();
+            this.EduFinalLabel = new System.Windows.Forms.Label();
+            this.SocialFinalLabel = new System.Windows.Forms.Label();
+            this.EnduranceFinalLabel = new System.Windows.Forms.Label();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.CharacterSheetPage.SuspendLayout();
             this.MainToolStrip.SuspendLayout();
             this.MainMenuStrip.SuspendLayout();
@@ -193,6 +208,7 @@
             this.helpToolStripButton.Name = "helpToolStripButton";
             this.helpToolStripButton.Size = new System.Drawing.Size(29, 24);
             this.helpToolStripButton.Text = "He&lp";
+            this.helpToolStripButton.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // MainMenuStrip
             // 
@@ -225,13 +241,13 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.openToolStripMenuItem.Text = "&Open";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(178, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(221, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -239,23 +255,24 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(178, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // helpToolStripMenuItem
@@ -270,13 +287,14 @@
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(139, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(221, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // SkillsPage
             // 
@@ -756,19 +774,33 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.Controls.Add(this.EnduranceFinalLabel, 3, 8);
+            this.tableLayoutPanel3.Controls.Add(this.SocialFinalLabel, 1, 8);
+            this.tableLayoutPanel3.Controls.Add(this.EduFinalLabel, 3, 7);
+            this.tableLayoutPanel3.Controls.Add(this.IntellectFinalLabel, 1, 7);
+            this.tableLayoutPanel3.Controls.Add(this.DextrityFinalLabel, 3, 6);
+            this.tableLayoutPanel3.Controls.Add(this.StrengthFinalLabel, 1, 6);
+            this.tableLayoutPanel3.Controls.Add(this.FourthSkillFinalLabel, 3, 4);
+            this.tableLayoutPanel3.Controls.Add(this.ThirsSkillFinalLabel, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.SecondSkillFinalLabel, 3, 3);
+            this.tableLayoutPanel3.Controls.Add(this.FirstSkillFinalLabel, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.LastNameFinalLabel, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.AbilityLabel, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.SkillLabel, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.NameSaveLabel, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label6, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.LastNameSaveLabel, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label10, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.label5, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.label8, 2, 3);
-            this.tableLayoutPanel3.Controls.Add(this.label9, 2, 4);
-            this.tableLayoutPanel3.Controls.Add(this.FirstNameSaveLabel, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 7);
-            this.tableLayoutPanel3.Controls.Add(this.label2, 0, 8);
-            this.tableLayoutPanel3.Controls.Add(this.label3, 2, 6);
-            this.tableLayoutPanel3.Controls.Add(this.label7, 2, 7);
-            this.tableLayoutPanel3.Controls.Add(this.label11, 2, 8);
+            this.tableLayoutPanel3.Controls.Add(this.ThirdSkillDataSaveLabel, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.FirstSkillSaveLabel, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.SecondSkillSaveLabel, 2, 3);
+            this.tableLayoutPanel3.Controls.Add(this.FourthSkillDataSaveLabel, 2, 4);
+            this.tableLayoutPanel3.Controls.Add(this.StrengthDataSaveLabel, 0, 6);
+            this.tableLayoutPanel3.Controls.Add(this.IntellectDataSaveLabel, 0, 7);
+            this.tableLayoutPanel3.Controls.Add(this.SocialDataSaveLabel, 0, 8);
+            this.tableLayoutPanel3.Controls.Add(this.DexterityDataSaveLabel, 2, 6);
+            this.tableLayoutPanel3.Controls.Add(this.educationDataSaveLabel, 2, 7);
+            this.tableLayoutPanel3.Controls.Add(this.EnduranceDataSaveLabel, 2, 8);
+            this.tableLayoutPanel3.Controls.Add(this.FirstNameFinalLabel, 1, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(9, 63);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 10;
@@ -785,53 +817,57 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(762, 339);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
-            // FirstNameSaveLabel
+            // StrengthDataSaveLabel
             // 
-            this.FirstNameSaveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.StrengthDataSaveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.FirstNameSaveLabel.AutoSize = true;
-            this.FirstNameSaveLabel.Location = new System.Drawing.Point(3, 198);
-            this.FirstNameSaveLabel.Name = "FirstNameSaveLabel";
-            this.FirstNameSaveLabel.Size = new System.Drawing.Size(184, 33);
-            this.FirstNameSaveLabel.TabIndex = 0;
-            this.FirstNameSaveLabel.Text = "First Name";
+            this.StrengthDataSaveLabel.AutoSize = true;
+            this.StrengthDataSaveLabel.Location = new System.Drawing.Point(3, 198);
+            this.StrengthDataSaveLabel.Name = "StrengthDataSaveLabel";
+            this.StrengthDataSaveLabel.Size = new System.Drawing.Size(184, 33);
+            this.StrengthDataSaveLabel.TabIndex = 0;
+            this.StrengthDataSaveLabel.Text = "Strength";
+            this.StrengthDataSaveLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label1
+            // IntellectDataSaveLabel
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.IntellectDataSaveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 231);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "First Name";
+            this.IntellectDataSaveLabel.AutoSize = true;
+            this.IntellectDataSaveLabel.Location = new System.Drawing.Point(3, 231);
+            this.IntellectDataSaveLabel.Name = "IntellectDataSaveLabel";
+            this.IntellectDataSaveLabel.Size = new System.Drawing.Size(184, 33);
+            this.IntellectDataSaveLabel.TabIndex = 1;
+            this.IntellectDataSaveLabel.Text = "Intellect";
+            this.IntellectDataSaveLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // SocialDataSaveLabel
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SocialDataSaveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 264);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 33);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "First Name";
+            this.SocialDataSaveLabel.AutoSize = true;
+            this.SocialDataSaveLabel.Location = new System.Drawing.Point(3, 264);
+            this.SocialDataSaveLabel.Name = "SocialDataSaveLabel";
+            this.SocialDataSaveLabel.Size = new System.Drawing.Size(184, 33);
+            this.SocialDataSaveLabel.TabIndex = 2;
+            this.SocialDataSaveLabel.Text = "Social";
+            this.SocialDataSaveLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // DexterityDataSaveLabel
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DexterityDataSaveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(383, 198);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 33);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "First Name";
+            this.DexterityDataSaveLabel.AutoSize = true;
+            this.DexterityDataSaveLabel.Location = new System.Drawing.Point(383, 198);
+            this.DexterityDataSaveLabel.Name = "DexterityDataSaveLabel";
+            this.DexterityDataSaveLabel.Size = new System.Drawing.Size(184, 33);
+            this.DexterityDataSaveLabel.TabIndex = 3;
+            this.DexterityDataSaveLabel.Text = "Dexterity";
+            this.DexterityDataSaveLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
@@ -844,90 +880,98 @@
             this.label4.Size = new System.Drawing.Size(184, 33);
             this.label4.TabIndex = 4;
             this.label4.Text = "First Name";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label5
+            // FirstSkillSaveLabel
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.FirstSkillSaveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 99);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(184, 33);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "First Name";
+            this.FirstSkillSaveLabel.AutoSize = true;
+            this.FirstSkillSaveLabel.Location = new System.Drawing.Point(3, 99);
+            this.FirstSkillSaveLabel.Name = "FirstSkillSaveLabel";
+            this.FirstSkillSaveLabel.Size = new System.Drawing.Size(184, 33);
+            this.FirstSkillSaveLabel.TabIndex = 5;
+            this.FirstSkillSaveLabel.Text = "First Skill";
+            this.FirstSkillSaveLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label6
+            // LastNameSaveLabel
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.LastNameSaveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(383, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 33);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "First Name";
+            this.LastNameSaveLabel.AutoSize = true;
+            this.LastNameSaveLabel.Location = new System.Drawing.Point(383, 33);
+            this.LastNameSaveLabel.Name = "LastNameSaveLabel";
+            this.LastNameSaveLabel.Size = new System.Drawing.Size(184, 33);
+            this.LastNameSaveLabel.TabIndex = 6;
+            this.LastNameSaveLabel.Text = "Last Name";
+            this.LastNameSaveLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label7
+            // educationDataSaveLabel
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.educationDataSaveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(383, 231);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(184, 33);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "First Name";
+            this.educationDataSaveLabel.AutoSize = true;
+            this.educationDataSaveLabel.Location = new System.Drawing.Point(383, 231);
+            this.educationDataSaveLabel.Name = "educationDataSaveLabel";
+            this.educationDataSaveLabel.Size = new System.Drawing.Size(184, 33);
+            this.educationDataSaveLabel.TabIndex = 7;
+            this.educationDataSaveLabel.Text = "Education";
+            this.educationDataSaveLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label8
+            // SecondSkillSaveLabel
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SecondSkillSaveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(383, 99);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(184, 33);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "First Name";
+            this.SecondSkillSaveLabel.AutoSize = true;
+            this.SecondSkillSaveLabel.Location = new System.Drawing.Point(383, 99);
+            this.SecondSkillSaveLabel.Name = "SecondSkillSaveLabel";
+            this.SecondSkillSaveLabel.Size = new System.Drawing.Size(184, 33);
+            this.SecondSkillSaveLabel.TabIndex = 8;
+            this.SecondSkillSaveLabel.Text = "Second Skill";
+            this.SecondSkillSaveLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label9
+            // FourthSkillDataSaveLabel
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.FourthSkillDataSaveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(383, 132);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(184, 33);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "First Name";
+            this.FourthSkillDataSaveLabel.AutoSize = true;
+            this.FourthSkillDataSaveLabel.Location = new System.Drawing.Point(383, 132);
+            this.FourthSkillDataSaveLabel.Name = "FourthSkillDataSaveLabel";
+            this.FourthSkillDataSaveLabel.Size = new System.Drawing.Size(184, 33);
+            this.FourthSkillDataSaveLabel.TabIndex = 9;
+            this.FourthSkillDataSaveLabel.Text = "Fourth Skill";
+            this.FourthSkillDataSaveLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label10
+            // ThirdSkillDataSaveLabel
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ThirdSkillDataSaveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 132);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(184, 33);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "First Name";
+            this.ThirdSkillDataSaveLabel.AutoSize = true;
+            this.ThirdSkillDataSaveLabel.Location = new System.Drawing.Point(3, 132);
+            this.ThirdSkillDataSaveLabel.Name = "ThirdSkillDataSaveLabel";
+            this.ThirdSkillDataSaveLabel.Size = new System.Drawing.Size(184, 33);
+            this.ThirdSkillDataSaveLabel.TabIndex = 10;
+            this.ThirdSkillDataSaveLabel.Text = "Third Skill";
+            this.ThirdSkillDataSaveLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label11
+            // EnduranceDataSaveLabel
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.EnduranceDataSaveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(383, 264);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(184, 33);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "First Name";
+            this.EnduranceDataSaveLabel.AutoSize = true;
+            this.EnduranceDataSaveLabel.Location = new System.Drawing.Point(383, 264);
+            this.EnduranceDataSaveLabel.Name = "EnduranceDataSaveLabel";
+            this.EnduranceDataSaveLabel.Size = new System.Drawing.Size(184, 33);
+            this.EnduranceDataSaveLabel.TabIndex = 11;
+            this.EnduranceDataSaveLabel.Text = "Endurance";
+            this.EnduranceDataSaveLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // NameSaveLabel
             // 
@@ -935,11 +979,174 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NameSaveLabel.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.NameSaveLabel, 4);
             this.NameSaveLabel.Location = new System.Drawing.Point(3, 0);
             this.NameSaveLabel.Name = "NameSaveLabel";
-            this.NameSaveLabel.Size = new System.Drawing.Size(184, 33);
+            this.NameSaveLabel.Size = new System.Drawing.Size(756, 33);
             this.NameSaveLabel.TabIndex = 12;
-            this.NameSaveLabel.Text = "First Name";
+            this.NameSaveLabel.Text = "Name:";
+            // 
+            // SkillLabel
+            // 
+            this.SkillLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SkillLabel.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.SkillLabel, 4);
+            this.SkillLabel.Location = new System.Drawing.Point(3, 66);
+            this.SkillLabel.Name = "SkillLabel";
+            this.SkillLabel.Size = new System.Drawing.Size(756, 33);
+            this.SkillLabel.TabIndex = 13;
+            this.SkillLabel.Text = "Skills:";
+            // 
+            // AbilityLabel
+            // 
+            this.AbilityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AbilityLabel.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.AbilityLabel, 4);
+            this.AbilityLabel.Location = new System.Drawing.Point(3, 165);
+            this.AbilityLabel.Name = "AbilityLabel";
+            this.AbilityLabel.Size = new System.Drawing.Size(756, 33);
+            this.AbilityLabel.TabIndex = 14;
+            this.AbilityLabel.Text = "Abilities";
+            // 
+            // FirstNameFinalLabel
+            // 
+            this.FirstNameFinalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FirstNameFinalLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.FirstNameFinalLabel.Location = new System.Drawing.Point(193, 33);
+            this.FirstNameFinalLabel.Name = "FirstNameFinalLabel";
+            this.FirstNameFinalLabel.Size = new System.Drawing.Size(184, 33);
+            this.FirstNameFinalLabel.TabIndex = 15;
+            // 
+            // LastNameFinalLabel
+            // 
+            this.LastNameFinalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LastNameFinalLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.LastNameFinalLabel.Location = new System.Drawing.Point(573, 33);
+            this.LastNameFinalLabel.Name = "LastNameFinalLabel";
+            this.LastNameFinalLabel.Size = new System.Drawing.Size(186, 33);
+            this.LastNameFinalLabel.TabIndex = 16;
+            // 
+            // FirstSkillFinalLabel
+            // 
+            this.FirstSkillFinalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FirstSkillFinalLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.FirstSkillFinalLabel.Location = new System.Drawing.Point(193, 99);
+            this.FirstSkillFinalLabel.Name = "FirstSkillFinalLabel";
+            this.FirstSkillFinalLabel.Size = new System.Drawing.Size(184, 33);
+            this.FirstSkillFinalLabel.TabIndex = 17;
+            // 
+            // SecondSkillFinalLabel
+            // 
+            this.SecondSkillFinalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SecondSkillFinalLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SecondSkillFinalLabel.Location = new System.Drawing.Point(573, 99);
+            this.SecondSkillFinalLabel.Name = "SecondSkillFinalLabel";
+            this.SecondSkillFinalLabel.Size = new System.Drawing.Size(186, 33);
+            this.SecondSkillFinalLabel.TabIndex = 18;
+            // 
+            // ThirsSkillFinalLabel
+            // 
+            this.ThirsSkillFinalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ThirsSkillFinalLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ThirsSkillFinalLabel.Location = new System.Drawing.Point(193, 132);
+            this.ThirsSkillFinalLabel.Name = "ThirsSkillFinalLabel";
+            this.ThirsSkillFinalLabel.Size = new System.Drawing.Size(184, 33);
+            this.ThirsSkillFinalLabel.TabIndex = 19;
+            // 
+            // FourthSkillFinalLabel
+            // 
+            this.FourthSkillFinalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FourthSkillFinalLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.FourthSkillFinalLabel.Location = new System.Drawing.Point(573, 132);
+            this.FourthSkillFinalLabel.Name = "FourthSkillFinalLabel";
+            this.FourthSkillFinalLabel.Size = new System.Drawing.Size(186, 33);
+            this.FourthSkillFinalLabel.TabIndex = 20;
+            // 
+            // StrengthFinalLabel
+            // 
+            this.StrengthFinalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.StrengthFinalLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.StrengthFinalLabel.Location = new System.Drawing.Point(193, 198);
+            this.StrengthFinalLabel.Name = "StrengthFinalLabel";
+            this.StrengthFinalLabel.Size = new System.Drawing.Size(184, 33);
+            this.StrengthFinalLabel.TabIndex = 21;
+            // 
+            // DextrityFinalLabel
+            // 
+            this.DextrityFinalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DextrityFinalLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DextrityFinalLabel.Location = new System.Drawing.Point(573, 198);
+            this.DextrityFinalLabel.Name = "DextrityFinalLabel";
+            this.DextrityFinalLabel.Size = new System.Drawing.Size(186, 33);
+            this.DextrityFinalLabel.TabIndex = 22;
+            // 
+            // IntellectFinalLabel
+            // 
+            this.IntellectFinalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IntellectFinalLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.IntellectFinalLabel.Location = new System.Drawing.Point(193, 231);
+            this.IntellectFinalLabel.Name = "IntellectFinalLabel";
+            this.IntellectFinalLabel.Size = new System.Drawing.Size(184, 33);
+            this.IntellectFinalLabel.TabIndex = 23;
+            // 
+            // EduFinalLabel
+            // 
+            this.EduFinalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EduFinalLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.EduFinalLabel.Location = new System.Drawing.Point(573, 231);
+            this.EduFinalLabel.Name = "EduFinalLabel";
+            this.EduFinalLabel.Size = new System.Drawing.Size(186, 33);
+            this.EduFinalLabel.TabIndex = 24;
+            // 
+            // SocialFinalLabel
+            // 
+            this.SocialFinalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SocialFinalLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SocialFinalLabel.Location = new System.Drawing.Point(193, 264);
+            this.SocialFinalLabel.Name = "SocialFinalLabel";
+            this.SocialFinalLabel.Size = new System.Drawing.Size(184, 33);
+            this.SocialFinalLabel.TabIndex = 25;
+            // 
+            // EnduranceFinalLabel
+            // 
+            this.EnduranceFinalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EnduranceFinalLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.EnduranceFinalLabel.Location = new System.Drawing.Point(573, 264);
+            this.EnduranceFinalLabel.Name = "EnduranceFinalLabel";
+            this.EnduranceFinalLabel.Size = new System.Drawing.Size(186, 33);
+            this.EnduranceFinalLabel.TabIndex = 26;
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.CreatePrompt = true;
             // 
             // CharacterGenerationForm
             // 
@@ -1027,17 +1234,32 @@
         private System.Windows.Forms.Label ThirdSkillDataLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label NameSaveLabel;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LastNameSaveLabel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label FirstNameSaveLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label ThirdSkillDataSaveLabel;
+        private System.Windows.Forms.Label FirstSkillSaveLabel;
+        private System.Windows.Forms.Label SecondSkillSaveLabel;
+        private System.Windows.Forms.Label FourthSkillDataSaveLabel;
+        private System.Windows.Forms.Label StrengthDataSaveLabel;
+        private System.Windows.Forms.Label IntellectDataSaveLabel;
+        private System.Windows.Forms.Label SocialDataSaveLabel;
+        private System.Windows.Forms.Label DexterityDataSaveLabel;
+        private System.Windows.Forms.Label educationDataSaveLabel;
+        private System.Windows.Forms.Label EnduranceDataSaveLabel;
+        private System.Windows.Forms.Label AbilityLabel;
+        private System.Windows.Forms.Label SkillLabel;
+        private System.Windows.Forms.Label EnduranceFinalLabel;
+        private System.Windows.Forms.Label SocialFinalLabel;
+        private System.Windows.Forms.Label EduFinalLabel;
+        private System.Windows.Forms.Label IntellectFinalLabel;
+        private System.Windows.Forms.Label DextrityFinalLabel;
+        private System.Windows.Forms.Label StrengthFinalLabel;
+        private System.Windows.Forms.Label FourthSkillFinalLabel;
+        private System.Windows.Forms.Label ThirsSkillFinalLabel;
+        private System.Windows.Forms.Label SecondSkillFinalLabel;
+        private System.Windows.Forms.Label FirstSkillFinalLabel;
+        private System.Windows.Forms.Label LastNameFinalLabel;
+        private System.Windows.Forms.Label FirstNameFinalLabel;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }

@@ -134,5 +134,15 @@ namespace finalTestC.Views
         {
             LoadSkills();
         }
+
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog();
+        }
     }
 }
