@@ -47,17 +47,17 @@ namespace finalTestC.Views
             }
             if(MainTabControl.SelectedIndex==3)
             {
-                using (StreamWriter writer = new StreamWriter("FinalData.txt"))
-                {
-                    FirstNameFinalLabel.Text = Program.characterForm.FirstNameDataLabel;
-                    LastNameFinalLabel.Text = Program.characterForm.LastNameDataLabel;
-                }
+                
             }
         }
 
         public static void generateCharacterSheet(object sender,EventArgs e)
         {
-            
+            using (StreamWriter writer = new StreamWriter("FinalData.txt"))
+            {
+                FirstNameFinalLabel.Text = Program.characterForm.FirstNameDataLabel;
+                LastNameFinalLabel.Text = Program.characterForm.LastNameDataLabel;
+            }
         }
         private void Label3_Click(object sender, EventArgs e)
         {
@@ -110,9 +110,9 @@ namespace finalTestC.Views
             int Socialnumber = random.Next(15);
             SocialDataLabel.Text = Socialnumber.ToString();
         }
-
+        //list created
         public static List<string> SkillsList = new List<string>();
-
+        //loadskill event
         public static void LoadSkills()
         {
            
@@ -126,7 +126,7 @@ namespace finalTestC.Views
             }
         }
 
-
+        //skills generation 
         private void GenerateSkillsButton_Click(object sender, EventArgs e)
         {
             int skill1Index = random.Next(SkillsList.Count);
@@ -141,7 +141,11 @@ namespace finalTestC.Views
             int skill4Index = random.Next(SkillsList.Count);
             FourthSkillDataLabel.Text = SkillsList[skill4Index];
         }
-
+        /// <summary>
+        /// This is event handler for Character generation form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CharacterGenerationForm_Load(object sender, EventArgs e)
         {
             LoadSkills();
@@ -161,7 +165,11 @@ namespace finalTestC.Views
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// This is event handler for exit event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
